@@ -26,7 +26,14 @@ npm:
 express {{pillar['appName']}}:
   cmd.run:
     - cwd: /web/nodeApps
-    - creates: /web/nodeApps/{{pillar['appName']}}
+    - creates: /web/{{pillar['appDirRoot']}}/{{pillar['appName']}}
+appLogsDir:
+  file.directory:
+    - user:  vagrant
+    - name:  /web/{{pillar['appDirRoot']}}/{{pillar['appName']}}/logs
+    - group:  vagrant
+    - mode:  755
+    - makedirs: True
 npm install:
   cmd.run:
     - cwd: /web/{{pillar['appDirRoot']}}/{{pillar['appName']}}
