@@ -8,4 +8,4 @@ Quick setup of a NodeJs server running on localhost:3000 using Vagrant + Saltsta
  4. `mkdir /web` on your host or edit Vagrantfile to point to where you wish to share file with the host.
  5. Edit configVars.yaml with the name of your app and the directory you want to host your node apps. Can leave either of these as is.
  6. `vagrant up` in your terminal
- 7. Your ready to load http://localhost:3000 and edit your files from your host machine.
+ 7. You're ready to load http://localhost:3000 and edit your files from your host machine.
